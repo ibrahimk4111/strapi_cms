@@ -4,35 +4,43 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "product"
+    "displayName": "product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "product_name": {
       "type": "string",
       "required": true
-    },
-    "description": {
-      "type": "blocks"
     },
     "inStock": {
       "type": "integer"
     },
-    "img": {
+    "product_img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "available": {
       "type": "boolean"
+    },
+    "pack_size": {
+      "type": "string"
+    },
+    "product_description": {
+      "type": "richtext"
+    },
+    "rating": {
+      "type": "decimal"
     }
   }
 }
