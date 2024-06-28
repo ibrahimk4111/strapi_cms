@@ -1,9 +1,15 @@
-module.exports = ({ env }) => ({
-  host: env('HOST', '0.0.0.0'),
-  port: env.int('PORT', 1337),
+module.exports = ({ env }) => {
+  
+  const host = env('HOST', '0.0.0.0');
+  const port = process.env.PORT || 4000;
+  console.log(`Strapi is binding to host ${host} on port ${port}`);
+
+  return {
+  host,
+  port,
   admin: {
     auth: {
-      secret: env('ADMIN_JWT_SECRET', 'a56s4df#@1a6sd5f1a65sd1f#@6a5sd1f65a1sdf65a1'),
+      secret: env('ADMIN_JWT_SECRET', 'vd6zi0IlWEWTY7Ri9vkSpQ=='),
     },
   },
   app: {
@@ -12,4 +18,4 @@ module.exports = ({ env }) => ({
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
   },
-});
+}};
