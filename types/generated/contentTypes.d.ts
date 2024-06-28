@@ -804,6 +804,7 @@ export interface ApiClientClient extends Schema.CollectionType {
     title: Attribute.String;
     URL: Attribute.Text;
     client_logo: Attribute.Media<'images'>;
+    added_new_field_on_client: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

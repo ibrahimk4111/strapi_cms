@@ -30,6 +30,9 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "added_new_field_on_client": {
+      "type": "string"
     }
   }
 }
